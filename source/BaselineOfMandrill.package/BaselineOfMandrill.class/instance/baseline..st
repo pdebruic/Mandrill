@@ -4,10 +4,12 @@ baseline: spec
 	spec
 		for: #common
 		do: [ spec
-				baseline: 'EmailReplyParser'
+				project: 'EmailReplyParser'
 				with: [ spec
-						
-						repository: 'github://pdebruic/EmailReplyParser:main/repository' ].
+						className: 'ConfigurationOfEmailReplyParser';
+						loads: #('Core');
+						versionString: '1.0';
+						repository: 'http://smalltalkhub.com/mc/pdebruic/EmailReplyParser/main/' ].
 			spec
 				package: 'Mandrill-Core' with: [ spec requires: #('NeoJSON') ];
 				package: 'Mandrill-Tests'
@@ -26,4 +28,4 @@ baseline: spec
 		for: #gemstone
 		do: [ spec
 				baseline: 'NeoJSON'
-				with: [ spec repository: 'github://GsDevKit/NeoJSON:master/repository' ] ]
+				with: [ spec repository: 'github://GsDevKit/NeoJSON:gs_master/repository' ] ]
